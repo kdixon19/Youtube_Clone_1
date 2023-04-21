@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const SearchPage = (props) => {
 
@@ -6,13 +7,19 @@ const SearchPage = (props) => {
 
     function handleSubmit (event) {
         event.preventDefault();
-        let video = props.video.filter ((el) => {
-            return(
-                el.video == searchInput
-            )
-        });
-        props.setVideo(video)
+        searchForSongs(); 
     }
+
+    async function searchForSongs(){
+        try {
+            let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?q=${searchInput}&key=AIzaSyD2Stn_jKR8WFK81mOJuNxYMhHsUdwwPZ8 &part=snippet&type=video&maxResults=3`);
+            console.log(response.data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+
     
     return (
         <form onSubmit={handleSubmit}>
