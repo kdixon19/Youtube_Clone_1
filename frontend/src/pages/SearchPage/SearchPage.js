@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { DATA } from '../../localData';
 
 const SearchPage = (props) => {
 
-    const [searchInput, setSearchInput] = useState('');
+    const [searchInput, setSearchInput] = useState([]);
 
     function handleSubmit (event) {
         event.preventDefault();
