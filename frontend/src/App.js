@@ -5,19 +5,18 @@ import "./App.css";
 // Pages Imports
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import HomePage from "./pages/HomePage/HomePage"
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
 
-// Util Imports
-import YouTubePage from "./pages/YouTubePage/YouTubePage";
 
 function App() {
   return (
     <div>
       <Navbar />
       <Routes>
-        <Route path="/*" element={<YouTubePage />} />
+        <Route path="/*" element={<HomePage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
