@@ -1,11 +1,15 @@
+//General Imports
 import React, { useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import axios from "axios";
 
+// Component Imports
 import CommentList from "../../components/CommentList/CommentList";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import VideoDescription from "../../components/VideoDescription/VideoDescription";
 import VideoList from "../../components/VideoList/VideoList";
+
+// Utility Imports
 import { relatedData } from "./relatedData";
 
 const VideoPage = () => {
@@ -37,15 +41,15 @@ const VideoPage = () => {
   };
 
   return (
-    <div className="wrapper">
-      <div className="videoPlayer">
+    <div>
+      <div>
         <VideoPlayer videoId={videoId} />
         <VideoDescription title={state.title} description={state.description} />
       </div>
-      <div className="videoList">
+      <div>
         <VideoList videos={relatedVideos} />
       </div>
-      <div className="commentList">
+      <div>
         <CommentList videoId={videoId} />
       </div>
     </div>
