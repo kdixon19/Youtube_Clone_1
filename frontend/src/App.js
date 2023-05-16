@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage/HomePage"
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
+import VideoPage from "./pages/VideoPage/VideoPage";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/:videoId" element={<VideoPage />} />
       </Routes>
     </div>
   );

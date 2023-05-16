@@ -7,24 +7,25 @@ import {KEY} from "../../localKey"
 
 // Page Imports
 import VideoPage from "../VideoPage/VideoPage";
-import SearchResultsPage from "../SearchPage/SearchPage";
+import SearchResultsPage from "../SearchResultsPage/SearchResultsPage";
 
 // Utility Imports
 import { localData } from ".//localData"
 
 // Component Imports
 import SearchBar from "../../components/SearchBar/SearchBar";
+import Footer from "../../components/Footer/Footer";
 
 function YouTubePage() {
   const [videoResults, setVideoResults] = useState(localData);
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   // if (process.env.NODE_ENV !== "production") {
   //   console.log("It's working!");
   // }
 
   useEffect(() => {
-    fetchResults("starwars");
+    fetchResults("star wars");
   }, []);
 
   const fetchResults = async (searchTerm) => {
@@ -51,13 +52,8 @@ function YouTubePage() {
   return (
     <div className="container">
       <SearchBar handleSearch={fetchResults} />
-      <Routes>
-        <Route
-          path="/"
-          element={<SearchResultsPage results={videoResults} />}
-        />
-        <Route path="/:videoId" element={<VideoPage />} />
-      </Routes>
+      <SearchResultsPage results={videoResults} />
+      <Footer/>
     </div>
   );
 }

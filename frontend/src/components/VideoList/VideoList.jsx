@@ -18,9 +18,7 @@ const VideoList = ({ videos }) => {
             return null;
           }
         })
-        }: (
-        <div>Loading your video...</div>
-      )
+        } 
     </div>
   );
 };

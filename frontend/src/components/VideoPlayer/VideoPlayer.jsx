@@ -1,6 +1,7 @@
 const VideoPlayer = ({ videoId }) => {
+    const source = `https://www.youtube.com/embed/${videoId}`
     return ( 
-        <iframe id="47S2EiGzNuI" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/47S2EiGzNuI" frameborder="0"></iframe>
+        <iframe id="ytplayer" type="text/html" width="640" height="360" src={source} frameBorder="0"></iframe>
      );
 }
  

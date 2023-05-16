@@ -16,7 +16,7 @@ import { relatedData } from "./relatedData";
 const VideoPage = () => {
   const { videoId } = useParams();
   const { state } = useLocation();
-  const [relatedVideos, setRelatedVideos] = useState([relatedData]);
+  const [relatedVideos, setRelatedVideos] = useState(relatedData);
 
   useEffect(() => {
     fetchRelatedVideos(videoId);
@@ -43,6 +43,7 @@ const VideoPage = () => {
 
   return (
     <div>
+      <h1>Hello</h1>
       <div>
         <VideoPlayer videoId={videoId} />
         <VideoDescription title={state.title} description={state.description} />
