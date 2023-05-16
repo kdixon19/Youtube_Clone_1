@@ -1,5 +1,4 @@
 import React from "react";
-import "./SearchResultsPage.css";
 import VideoList from "../../components/VideoList/VideoList";
 
 const SearchResultsPage = ({ results }) => {

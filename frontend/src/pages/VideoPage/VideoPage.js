@@ -1,19 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
-import { relatedData } from "./relatedHardCodedData";
 import axios from "axios";
-import "./VideoPage.css";
 
 import CommentList from "../../components/CommentList/CommentList";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import VideoDescription from "../../components/VideoDescription/VideoDescription";
 import VideoList from "../../components/VideoList/VideoList";
-import VideoDescription from "../../components/VideoDescription/VideoDescription";
 
 const VideoPage = () => {
   const { videoId } = useParams();
   const { state } = useLocation();
-  const [relatedVideos, setRelatedVideos] = useState(relatedData);
+  const [relatedVideos, setRelatedVideos] = useState([]);
 
   useEffect(() => {
     fetchRelatedVideos(videoId);

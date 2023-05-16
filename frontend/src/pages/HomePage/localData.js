@@ -1,4 +1,4 @@
-export const DATA = {
+export const localData = {
     "kind": "youtube#searchListResponse",
     "etag": "5T432wutqptotyVB0WlDu8iUsZs",
     "nextPageToken": "CAMQAA",

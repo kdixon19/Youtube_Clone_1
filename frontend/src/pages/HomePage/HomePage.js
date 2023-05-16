@@ -9,13 +9,13 @@ import VideoPage from "../VideoPage/VideoPage";
 import SearchResultsPage from "../SearchPage/SearchPage";
 
 // Utility Imports
-import DATA from "../HomePage/localData"
+import { localData } from ".//localData"
 
 // Component Imports
 import SearchBar from "../../components/SearchBar/SearchBar";
 
 function YouTubePage() {
-  const [videoResults, setVideoResults] = useState([DATA]);
+  const [videoResults, setVideoResults] = useState(localData);
   const navigate = useNavigate();
 
   if (process.env.NODE_ENV !== "production") {
