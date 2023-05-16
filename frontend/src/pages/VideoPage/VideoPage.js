@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import axios from "axios";
+import {KEY} from "../../localKey"
 
 // Component Imports
 import CommentList from "../../components/CommentList/CommentList";
@@ -29,7 +30,7 @@ const VideoPage = () => {
           params: {
             type: "video",
             relatedToVideoId: relatedVideoId,
-            key: process.env.REACT_APP_YT_API_KEY,
+            key: KEY,
             part: "snippet",
           },
         }

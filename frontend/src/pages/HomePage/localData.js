@@ -1,13 +1,4 @@
-export const localData = {
-    "kind": "youtube#searchListResponse",
-    "etag": "5T432wutqptotyVB0WlDu8iUsZs",
-    "nextPageToken": "CAMQAA",
-    "regionCode": "US",
-    "pageInfo": {
-        "totalResults": 1000000,
-        "resultsPerPage": 3
-    },
-    "items": [
+export const localData = [
         {
             "kind": "youtube#searchResult",
             "etag": "U3DS47YChMchS4WRDdehEFRxYX8",
@@ -111,4 +102,3 @@ export const localData = {
             }
         }
     ]
-}

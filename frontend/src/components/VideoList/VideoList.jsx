@@ -5,9 +5,8 @@ const VideoList = ({ videos }) => {
   const { handleVideoPush } = useVideoPush();
 
   return (
-    <>
-      {videos (
-        videos.map((video) => {
+    <div>
+      {videos.map((video) => {
           if (video.snippet) {
             return (
               <div key={video.id.videoId}>
@@ -19,10 +18,10 @@ const VideoList = ({ videos }) => {
             return null;
           }
         })
-      ) }: (
+        }: (
         <div>Loading your video...</div>
       )
-    </>
+    </div>
   );
 };
 

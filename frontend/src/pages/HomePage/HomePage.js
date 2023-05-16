@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import {KEY} from "../../localKey"
 
 // Page Imports
 import VideoPage from "../VideoPage/VideoPage";
@@ -18,9 +19,9 @@ function YouTubePage() {
   const [videoResults, setVideoResults] = useState(localData);
   const navigate = useNavigate();
 
-  if (process.env.NODE_ENV !== "production") {
-    console.log("It's working!");
-  }
+  // if (process.env.NODE_ENV !== "production") {
+  //   console.log("It's working!");
+  // }
 
   useEffect(() => {
     fetchResults("starwars");
@@ -33,7 +34,7 @@ function YouTubePage() {
         {
           params: {
             q: searchTerm,
-            key: process.env.REACT_APP_YT_API_KEY,
+            key: KEY,
             part: "snippet",
             type: "video",
             maxResults: 5,
@@ -41,7 +42,7 @@ function YouTubePage() {
         }
       );
       setVideoResults(response.data.items);
-      navigate("/");
+      // navigate("/");
     } catch (error) {
       console.log(error.message);
     }
