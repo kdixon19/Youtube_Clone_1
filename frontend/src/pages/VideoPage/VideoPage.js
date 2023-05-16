@@ -6,11 +6,12 @@ import CommentList from "../../components/CommentList/CommentList";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import VideoDescription from "../../components/VideoDescription/VideoDescription";
 import VideoList from "../../components/VideoList/VideoList";
+import { relatedData } from "./relatedData";
 
 const VideoPage = () => {
   const { videoId } = useParams();
   const { state } = useLocation();
-  const [relatedVideos, setRelatedVideos] = useState([]);
+  const [relatedVideos, setRelatedVideos] = useState([relatedData]);
 
   useEffect(() => {
     fetchRelatedVideos(videoId);
