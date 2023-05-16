@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage/HomePage"
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
 import VideoPage from "./pages/VideoPage/VideoPage";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {

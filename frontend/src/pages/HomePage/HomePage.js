@@ -53,7 +53,6 @@ function YouTubePage() {
     <div className="container">
       <SearchBar handleSearch={fetchResults} />
       <SearchResultsPage results={videoResults} />
-      <Footer/>
     </div>
   );
 }

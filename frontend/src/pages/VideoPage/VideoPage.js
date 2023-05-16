@@ -42,8 +42,7 @@ const VideoPage = () => {
   };
 
   return (
-    <div>
-      <h1>Hello</h1>
+    <div style={{margin: '0 auto', width: '50%'}}>
       <div>
         <VideoPlayer videoId={videoId} />
         <VideoDescription title={state.title} description={state.description} />

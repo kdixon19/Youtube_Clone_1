@@ -14,6 +14,7 @@ li {
   color: white;
   margin-bottom: 2rem;
   padding: 1.5rem 2rem;
+  text-align: center;
 }
 
 .navBar button {
@@ -32,4 +33,5 @@ li {
 .brand {
   cursor: pointer;
   font-size: 2rem;
+  text-align: center;
 }
